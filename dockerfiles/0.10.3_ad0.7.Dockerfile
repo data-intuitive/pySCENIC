@@ -19,9 +19,9 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r /tmp/requirements_docker.txt
 
 # use version from argument (--build-arg version=0.9.7), or a default:
-ARG version="0.9.19"
+ARG version="0.10.3"
 RUN pip install --no-cache-dir pyscenic==$version && \
-    pip install --no-cache-dir scanpy==1.4.4.post1
+    pip install --no-cache-dir scanpy==1.6.0
 
 
 FROM python:3.7.4-slim AS build-image
